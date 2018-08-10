@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio for Mac
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CardGame_2D", "Assembly-CSharp.csproj", "{7B6E0AC8-51B6-D450-4900-8BBDA718B750}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CardGame_2D", "Assembly-CSharp-Editor.csproj", "{D0F140C8-477F-F821-D8A7-8007BEFF6B2B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7B6E0AC8-51B6-D450-4900-8BBDA718B750}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B6E0AC8-51B6-D450-4900-8BBDA718B750}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B6E0AC8-51B6-D450-4900-8BBDA718B750}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B6E0AC8-51B6-D450-4900-8BBDA718B750}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D0F140C8-477F-F821-D8A7-8007BEFF6B2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0F140C8-477F-F821-D8A7-8007BEFF6B2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0F140C8-477F-F821-D8A7-8007BEFF6B2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0F140C8-477F-F821-D8A7-8007BEFF6B2B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
