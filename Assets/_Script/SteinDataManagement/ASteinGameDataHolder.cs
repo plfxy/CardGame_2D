@@ -3,84 +3,75 @@ using System.Collections;
 
 public abstract class ASteinGameDataHolder
 {
-	protected const string exceptionMessageFormat = "DataForm {0} DO NOT have data {1}";
-	protected const int NONE_DATA_KEY = -1;
+    protected const string exceptionMessageFormat = "DataForm {0} DO NOT have data {1}";
+    protected const int NONE_DATA_KEY = -1;
 
-	public abstract string DataName {
-		get;
-		set;
-	}
+    public abstract string DataName
+    {
+        get;
+        set;
+    }
 
-	public abstract void SetData (ResourceBase resource);
-	//		public abstract bool SetCurData (string[] keyNames, string[] keyValues);
+    public abstract void Release();
 
-	public abstract void Release ();
+    public abstract bool MoveNext();
 
-	public abstract bool MoveNext ();
+    public abstract byte ReadByte(string name);
 
-	public abstract byte ReadByte (string name);
+    public abstract sbyte ReadSByte(string name);
 
-	public abstract sbyte ReadSByte (string name);
+    public abstract int ReadInt(string name);
 
-	public abstract int ReadInt (string name);
+    public abstract long ReadLong(string name);
 
-	public abstract long ReadLong (string name);
+    public abstract string ReadUTF8(string name);
 
-	public abstract string ReadUTF8 (string name);
+    public abstract float ReadFloat(string name);
 
-	public abstract float ReadFloat (string name);
+    public virtual bool ReadBool(string name)
+    {
+        byte _boolVale = ReadByte(name);
+        return _boolVale == 1;
+    }
 
-	public abstract byte[] ReadBlob (string name);
-	/// <summary>
-	/// 对于scriptableobject或者其他自带序列化的数据格式，只能用这种了
-	/// </summary>
-	/// <returns>The data object.</returns>
-	public abstract IClientData ReadDataObject ();
+    /// <summary>
+    ///读取毫秒（ms）时间
+    /// </summary>
+    /// <returns>The MS time.</returns>
+    /// <param name="name">Name.</param>
+    public virtual float ReadMSTime(string name)
+    {
+        return (float)ReadLong(name) / 1000.0f;
+    }
 
-	public virtual bool ReadBool (string name)
-	{
-		byte _boolVale = ReadByte (name);
-		return _boolVale == 1;
-	}
+    public virtual float ReadPercentValue(string name)
+    {
+        return (float)ReadLong(name) / 100.0f;
+    }
 
-	/// <summary>
-	///读取毫秒（ms）时间
-	/// </summary>
-	/// <returns>The MS time.</returns>
-	/// <param name="name">Name.</param>
-	public virtual float ReadMSTime (string name)
-	{
-		return (float)ReadLong (name) / 1000.0f;
-	}
+    public virtual int[] ReadIdList(string name, char splitChar = ',')
+    {
+        string str = ReadUTF8(name);
 
-	public virtual float ReadPercentValue (string name)
-	{
-		return (float)ReadLong (name) / 100.0f;
-	}
+        if (str == null || str.Equals(""))
+            return null;
+        string[] splitList = str.Split(new char[] { splitChar });
+        int[] idArr = new int[splitList.Length];
+        for (int i = 0; i < splitList.Length; ++i)
+        {
+            idArr[i] = int.Parse(splitList[i]);
+        }
+        return idArr;
+    }
 
-	public virtual int[] ReadIdList (string name, char splitChar = ',')
-	{
-		string str = ReadUTF8 (name);
-		
-		if (str == null || str.Equals (""))
-			return null;
-		string[] splitList = str.Split (new char[]{ splitChar });
-		int[] idArr = new int[splitList.Length];
-		for (int i = 0; i < splitList.Length; ++i)
-		{
-			idArr [i] = int.Parse (splitList [i]);
-		}
-		return idArr;
-	}
+    public virtual string[] ReadStringList(string name, char splitChar = ',')
+    {
+        string str = ReadUTF8(name);
 
-	public virtual string[] ReadStringList(string name,char splitChar=',')
-	{
-		string str = ReadUTF8 (name);
-		
-		if (str == null || str.Equals (""))
-			return null;
-		string[] splitList = str.Split (new char[]{ splitChar });
-		return splitList;
-	}
+        if (str == null || str.Equals(""))
+            return null;
+        string[] splitList = str.Split(new char[] { splitChar });
+        return splitList;
+    }
 }
 
