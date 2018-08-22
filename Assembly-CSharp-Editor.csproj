@@ -61,19 +61,19 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\SteinDataManagement\Editor\ClientDataSupportEditor.cs" />
-    <Compile Include="Assets\SteinDataManagement\Editor\CodeGen\ScripableObjectData\GenDataformFromScriptableObject.cs" />
+    <Compile Include="Assets\_Script\SteinDataManagement\Editor\ClientDataSupportEditor.cs" />
+    <Compile Include="Assets\_Script\SteinDataManagement\Editor\CodeGen\ScripableObjectData\GenDataformFromScriptableObject.cs" />
     <Reference Include="UnityEditor.StandardEvents">
-      <HintPath>/Users/Shared/Unity/CardGame_2D/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
+      <HintPath>/Users/Shared/CardGame_2D/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>/Users/Shared/Unity/CardGame_2D/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>/Users/Shared/CardGame_2D/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>/Users/Shared/Unity/CardGame_2D/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+      <HintPath>/Users/Shared/CardGame_2D/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>/Users/Shared/Unity/CardGame_2D/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>/Users/Shared/CardGame_2D/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
