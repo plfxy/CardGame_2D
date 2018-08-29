@@ -192,9 +192,9 @@ public class XLSDataHolder:ASteinGameDataHolder
             {
                 switch (cell.CellType)
                 {
-                    case CellType.String:
+                    case CellType.STRING:
                         return cell.StringCellValue;
-                    case CellType.Numeric:
+                    case CellType.NUMERIC:
                         return cell.NumericCellValue.ToString ();
                     default:
                         return cell.ToString ();
