@@ -70,11 +70,15 @@
     <Compile Include="Assets\_Script\CardInformation_Battle.cs" />
     <Compile Include="Assets\_Script\CardPile.cs" />
     <Compile Include="Assets\_Script\CardReturner.cs" />
+    <Compile Include="Assets\_Script\ConfigSheet\SkillConfigData.cs" />
     <Compile Include="Assets\_Script\OrderlyCardGetter.cs" />
     <Compile Include="Assets\_Script\RandomNumberCreator.cs" />
     <Compile Include="Assets\_Script\SteinDataManagement\ASteinGameDataHolder.cs" />
+    <Compile Include="Assets\_Script\SteinDataManagement\CommonConfigData.cs" />
+    <Compile Include="Assets\_Script\SteinDataManagement\ConfigSheet.cs" />
     <Compile Include="Assets\_Script\SteinDataManagement\DataHolder\XLSDataHolder.cs" />
-    <Compile Include="Assets\_Script\SteinDataManagement\Test.cs" />
+    <Compile Include="Assets\_Script\SteinDataManagement\DataManager.cs" />
+    <Compile Include="Assets\_Script\SteinDataManagement\ExcelIOTest.cs" />
     <Compile Include="Assets\_Script\Test.cs" />
     <None Include="Assets\Plugin\NPOI\EDITOR_ONLY.txt" />
     <Reference Include="UnityEditor.StandardEvents">
