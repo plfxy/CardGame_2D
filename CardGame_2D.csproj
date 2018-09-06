@@ -236,16 +236,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\_Script\BattleActionProcessor.cs" />
-    <Compile Include="Assets\_Script\Card.cs" />
-    <Compile Include="Assets\_Script\Card_Battle.cs" />
-    <Compile Include="Assets\_Script\CardDrawer.cs" />
-    <Compile Include="Assets\_Script\CardGetter.cs" />
-    <Compile Include="Assets\_Script\CardInformation_Base.cs" />
-    <Compile Include="Assets\_Script\CardInformation_Battle.cs" />
-    <Compile Include="Assets\_Script\CardPile.cs" />
-    <Compile Include="Assets\_Script\CardReturner.cs" />
+    <Compile Include="Assets\_Script\CardRelated\Card.cs" />
+    <Compile Include="Assets\_Script\CardRelated\Card_Battle.cs" />
+    <Compile Include="Assets\_Script\CardRelated\CardDrawer.cs" />
+    <Compile Include="Assets\_Script\CardRelated\CardGetter.cs" />
+    <Compile Include="Assets\_Script\CardRelated\CardInformation_Base.cs" />
+    <Compile Include="Assets\_Script\CardRelated\CardInformation_Battle.cs" />
+    <Compile Include="Assets\_Script\CardRelated\CardPile.cs" />
+    <Compile Include="Assets\_Script\CardRelated\CardReturner.cs" />
+    <Compile Include="Assets\_Script\CardRelated\OrderlyCardGetter.cs" />
     <Compile Include="Assets\_Script\ConfigSheet\SkillConfigData.cs" />
-    <Compile Include="Assets\_Script\OrderlyCardGetter.cs" />
     <Compile Include="Assets\_Script\RandomNumberCreator.cs" />
     <Compile Include="Assets\_Script\SteinDataManagement\ASteinGameDataHolder.cs" />
     <Compile Include="Assets\_Script\SteinDataManagement\CommonConfigData.cs" />
