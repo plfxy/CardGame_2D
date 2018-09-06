@@ -18,5 +18,5 @@ public class BattleActionProsessor {
 
     #endregion
 
-    public 
+    //public 
 }

@@ -236,6 +236,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\_Script\BattleActionProcessor.cs" />
+    <Compile Include="Assets\_Script\BattleEffect.cs" />
+    <Compile Include="Assets\_Script\BattleInfomationManager.cs" />
+    <Compile Include="Assets\_Script\BattleUnitInformation.cs" />
     <Compile Include="Assets\_Script\CardRelated\Card.cs" />
     <Compile Include="Assets\_Script\CardRelated\Card_Battle.cs" />
     <Compile Include="Assets\_Script\CardRelated\CardDrawer.cs" />
@@ -245,6 +248,7 @@
     <Compile Include="Assets\_Script\CardRelated\CardPile.cs" />
     <Compile Include="Assets\_Script\CardRelated\CardReturner.cs" />
     <Compile Include="Assets\_Script\CardRelated\OrderlyCardGetter.cs" />
+    <Compile Include="Assets\_Script\ConfigSheet\SheetIndexConfigData.cs" />
     <Compile Include="Assets\_Script\ConfigSheet\SkillConfigData.cs" />
     <Compile Include="Assets\_Script\RandomNumberCreator.cs" />
     <Compile Include="Assets\_Script\SteinDataManagement\ASteinGameDataHolder.cs" />
