@@ -28,6 +28,7 @@ public class XLSDataHolder:ASteinGameDataHolder
         if (!WorkbookReady)
             return;
         mCurSheet = wk.GetSheet(name);
+        DataName = name;
         SetupSheet(mCurSheet);
     }
 
@@ -37,6 +38,7 @@ public class XLSDataHolder:ASteinGameDataHolder
         if (!WorkbookReady)
             return;
         mCurSheet = wk.GetSheetAt(index);
+        DataName = mCurSheet.SheetName;
         SetupSheet(mCurSheet) ;
     }
 

@@ -2,13 +2,30 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ConfigSheet<T> where T : CommonConfigData,new() {
-    private List<T> data;
-    private string name;
+public interface IConfigSheet
+{
+    string Name { get; }
+    void Initialize(ASteinGameDataHolder dataHolder);
+}
 
-    public ConfigSheet(ASteinGameDataHolder dataHolder)
+public class ConfigSheet<T> : IConfigSheet where T : CommonConfigData, new() {
+    private List<T> data;
+    private string _name;
+
+    public string Name
     {
-        name = dataHolder.DataName;
+        get{
+            return _name;
+        }
+    }
+
+    public ConfigSheet()
+    {
+    }
+
+    public void Initialize(ASteinGameDataHolder dataHolder)
+    {
+        _name = dataHolder.DataName;
         data = new List<T>();
         while (dataHolder.MoveNext())
         {
@@ -19,7 +36,7 @@ public class ConfigSheet<T> where T : CommonConfigData,new() {
         }
     }
 
-    public T GetData(int key)
+    public T GetDataByKey(int key)
     {
         for (int i =0;i < data.Count; i++)
         {
@@ -28,7 +45,22 @@ public class ConfigSheet<T> where T : CommonConfigData,new() {
                 return data[i];
             }
         }
-        Debug.LogError("Can't find sheet [" + name + ": key = " + key + "]");
+        Debug.LogError("Can't find sheet [" + _name + ": key = " + key + "]");
         return null;
+    }
+
+    public T GetDataByIndex(int index)
+    {
+        if (GetDataLength() >= index)
+        {
+            return data[index];
+        }
+        Debug.LogError("Can't find sheet [" + _name + ": index = " + index + "]");
+        return null;
+    }
+
+    public int GetDataLength()
+    {
+        return data.Count;
     }
 }
